@@ -40,10 +40,13 @@
  * -----------------------------------------------------------
  */
 
-$animePicksVersion = "2.0.0.36";
-$animePicksVersionDate = "2012/09/27";
+$animePicksVersion = "2.0.0.37";
+$animePicksVersionDate = "2012/09/28";
 
 /*
+2.0.0.37        2012/09/28         ALPHA
+ 1) CORE: Moved into GIT for version control
+
 2.0.0.36        2012/09/27         ALPHA
  1) CORE: Some significant re-jigging for a week long big-push to get a rough demo working
  2) CORE: Added 'bento.php' for handling special Bento Box page
