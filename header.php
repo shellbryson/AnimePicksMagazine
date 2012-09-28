@@ -42,18 +42,20 @@
         
         <!-- do we need to change this depending on target??? -->
         <!--<meta name="MobileOptimized" content="320">-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-                
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
         
-        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' />
+        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700'>
         <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Oxygen'>
+            
         <?php wp_head(); ?>
             
         <!-- drop Google Analytics Here -->
         <!-- end analytics -->
+        
+
         
     </head>
     

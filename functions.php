@@ -37,12 +37,13 @@ sidebars, comments, ect.
     - custom google+ integration
     - adding custom fields to user profiles
 */
-require_once('library/version.php');                    // this comes turned off by default
+require_once('library/version.php');                    // ap version information
+require_once('library/detectmobile/detectmobile.php');  // browser detection library
 require_once('library/bones.php');                      // if you remove this, bones will break
 require_once('library/custom-post-type.php');           // you can disable this if you like
 require_once('library/admin.php');                      // this comes turned off by default
 require_once('library/log.php');                        // error logging to errors.css
-require_once('library/detectmobile/detectmobile.php');  // browser detection library
+
 
 /* AP SETUP & CONFIGURATION
  * 
@@ -80,11 +81,11 @@ function konnichiwa() {
         $apResponsive = true; // desktop, display full-fat responsive version
     }
     if ( $apResponsive ) {
-        wp_register_style( 'animepicks-responsive', get_template_directory_uri() . '/library/less/style.css', array(), $animePicksVersion, 'all' );
-        wp_enqueue_style( 'animepicks-responsive' );
+        //wp_register_style( 'animepicks-responsive', get_template_directory_uri() . '/library/less/style.css', array(), $animePicksVersion, 'all' );
+        //wp_enqueue_style( 'animepicks-responsive' );
     } else {
-        wp_register_style( 'animepicks-mobile', get_template_directory_uri() . '/library/less/style.css', array(), $animePicksVersion, 'all' );
-        wp_enqueue_style( 'animepicks-mobile' );
+        //wp_register_style( 'animepicks-mobile', get_template_directory_uri() . '/library/less/style.css', array(), $animePicksVersion, 'all' );
+        //wp_enqueue_style( 'animepicks-mobile' );
     }
     
     /* ADMIN BAR
