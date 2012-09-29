@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------
- * ANIME PICKS 2
+ * ANIME PICKS
  * Copyright 2012
  * 
  * File: animepicks.php 
@@ -40,7 +40,7 @@ var animePicksConfig = {
     height: window.innerHeight, // - Initial value (reset by window resize)
     narrowScreenWidth: 481,     // - Width below which mobile app mode kicks in. Guide: iPhone 3G width = 320px
     narrowScreen: false,        // - Checked on screen resize
-    cacheEnabled: false,         // - We assume that we can cache, at least until we test for localStorage...
+    cacheEnabled: false,        // - We assume that we can cache, at least until we test for localStorage...
     mobile: <?php echo $mobile ?>
 }
 
