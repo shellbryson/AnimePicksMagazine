@@ -125,45 +125,50 @@ SCRIPTS & ENQUEUEING
 
 // loading modernizr and jquery, and reply script
 function bones_scripts_and_styles() {
-  if (!is_admin()) {
-
-    // modernizr (without media query polyfill)
-    wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
-
-    // register main stylesheet
-    wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
-
-    // ie-only style sheet
-    wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
-
-    // comment reply script for threaded comments
-    if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
-      wp_enqueue_script( 'comment-reply' );
+    if (!is_admin()) {
+    
+        // modernizr (without media query polyfill)
+        wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
+        wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+        wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
+      
+        // comment reply script for threaded comments
+        if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
+            wp_enqueue_script( 'comment-reply' );
+        }
+      
+        //adding scripts file in the footer
+        GLOBAL $animePicksVersion;
+        if ( $isMobile ) {
+            wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.php?apversion=' . $animePicksVersion . '&mobile=true');
+        } else {
+            wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.php?apversion=' . $animePicksVersion . '&mobile=false');
+        }
+        wp_enqueue_script( 'bones-modernizr' );
+        wp_enqueue_style( 'bones-stylesheet' );
+        wp_enqueue_style('bones-ie-only');
+        wp_enqueue_script( 'jquery' );
+        
+        /*$url = 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js';
+        $test_url = @fopen($url,'r');
+        if( $test_url !== false ) {
+            function load_external_jQuery() {
+                wp_deregister_script( 'jquery' );
+                wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js');
+                wp_enqueue_script('jquery');
+            }
+            add_action('wp_enqueue_scripts', 'load_external_jQuery'); // initiate the function
+        } else {
+            function load_local_jQuery() {
+                wp_enqueue_script("jquery"); // enqueue the local file
+            }
+            add_action('wp_enqueue_scripts', 'load_local_jQuery'); // initiate the function
+        }
+        */
+        wp_enqueue_script( 'bones-js' );
+        wp_enqueue_script( 'animepicks-js' );
+        
     }
-
-    //adding scripts file in the footer
-    GLOBAL $animePicksVersion;
-    if ( $isMobile ) {
-        wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.php??apversion=' . $animePicksVersion . '&mobile=true');
-    } else {
-        wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.php??apversion=' . $animePicksVersion . '&mobile=false');
-    }
-    //wp_register_script( 'animepicks-js', get_stylesheet_directory_uri() . '/library/js/animepicks.js', array( 'jquery' ), '', true );
-
-    // enqueue styles and scripts
-    wp_enqueue_script( 'bones-modernizr' );
-    wp_enqueue_style( 'bones-stylesheet' );
-    wp_enqueue_style('bones-ie-only');
-    /*
-    I recommend using a plugin to call jQuery
-    using the google cdn. That way it stays cached
-    and your site will load faster.
-    */
-    wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'bones-js' );
-    //wp_enqueue_script( 'animepicks-js' );
-
-  }
 }
 
 // adding the conditional wrapper around ie stylesheet

@@ -67,6 +67,8 @@ if (!window.getComputedStyle) {
 }
 
 // as the page loads, call these scripts
+//$( function() {
+
 jQuery(document).ready(function($) {
     
     //dm(animePicksConfig);
