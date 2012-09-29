@@ -60,7 +60,7 @@
     </head>
     
     <body <?php body_class(); ?>>
-    
+
         <div id="container">
             
             <header class="header" role="banner">
@@ -69,11 +69,6 @@
                     
                     <!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
                     <p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-                    <div class="_base _responsive">base +</div>
-                    <div class="_1240up _responsive">1240up</div>
-                    <div class="_1030up _responsive">1030up</div>
-                    <div class="_768up _responsive">768up</div>
-                    <div class="_481up _responsive">481up</div>
                     
                     <!-- if you'd like to use the site description you can un-comment it below -->
                     <?php // bloginfo('description'); ?>
