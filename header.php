@@ -52,11 +52,15 @@
                     
                     <!--<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>-->
                     <?php // bloginfo('description'); ?>
-                    <nav role="navigation">
-                        <!--
-                        <?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-                        -->
-                    </nav>
+
                 </div> <!-- end #inner-header -->
             
             </header> <!-- end header -->
+            <nav role="navigation">
+                
+                <?php wp_nav_menu( array( 'theme_location' => 'header', 'container_class' => 'header_menu' ) ); ?>
+                <?php wp_nav_menu( array( 'theme_location' => 'headerCats', 'container_class' => 'header_menu_categories' ) ); ?>
+                
+                <?php //bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+                
+            </nav>
