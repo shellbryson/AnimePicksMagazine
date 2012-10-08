@@ -73,6 +73,12 @@ jQuery(document).ready(function($) {
     
     //dm(animePicksConfig);
     
+    
+    $(".updates").masonry({
+        itemSelector: ".neko_box",
+        columnWidth: 250
+    });
+    
     // Ref cache
     toc = $("#tableOfContents"); // toc container
     tocToggle = $("#btnToggleTOC"); // toc button

@@ -52,17 +52,13 @@
                                         <article class="neko_box <?php echo $neko_box_class?>">
                                             <?php echo $image;?>
                                             <header>
-                                                Anime Review
-                                                <?php echo $category;?>
+                                                <h1>Review</h1>
                                             </header>
                                             <section class="details">
                                                 <h3><a href="<?php echo $link;?>"><?php echo $title;?></a></h3>
                                                 <p><?php echo $excerpt;?></p>
                                             </section>
-                                            <section class="image">
-                                                <!--<a href="<?php echo $link;?>"><?php echo $image;?></a>-->
-                                                <!--<div class="news_item_date"><?php echo $dateformatted;?></div>-->
-                                            </section>
+
                                             <footer></footer>
                                         </article>
                                     </li>

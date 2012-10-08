@@ -278,15 +278,17 @@ POSTS & CONTENT STYLES
     margin-top: 2.2em;
 }
 
+
 article.neko_box {
     display:block;
+    /*position: relative;*/
     width:220px;
     overflow:hidden;
-    background:rgba(0,0,0,0.05);
-    border-radius: 30px 6px 20px 6px;
-    float:left;
+    background:rgba(242,242,242,1);
+    border-radius: 4px 16px 4px 10px;
+    /*float:left;*/
     margin:8px;
-    header, section, footer {
+    section, footer {
         padding:6px;
     }
     .neko_box_large {
@@ -299,11 +301,22 @@ article.neko_box {
         height:100px;
     }
     header {
-        background:rgba(0,0,0,0.05);
+        position: absolute;
+        z-index: 2;
+        top:0; left:0;
+        background:rgba(242,242,242,1);
+        border-radius: 4px 0 4px 0;
+        h1 {
+            display:block;
+            padding:2px 6px 2px 6px;
+            margin: 0;
+            font-size:12px;
+        }
     }
     img {
         width:100%;
         height: auto;
+        border-radius: 4px 16px 4px 10px;
     }
 }
 .hentry {
