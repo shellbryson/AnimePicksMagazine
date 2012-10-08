@@ -9,7 +9,6 @@
                         
                         <section class="updates lozenge">
                             <h1>Updates</h1>
-                            <ul>
                             <?php
                                 /* 
                                 ################################################
@@ -47,8 +46,6 @@
                                         $neko_box_class = "neko_box_small";
                                     }
                                     ?>
-                        
-                                    <li>
                                         <article class="neko_box <?php echo $neko_box_class?>">
                                             <?php echo $image;?>
                                             <header>
@@ -61,12 +58,10 @@
 
                                             <footer></footer>
                                         </article>
-                                    </li>
                                     
                                     <?php
                                 endforeach;
                             ?>
-                            </ul>
                             
                         </secion>
                         

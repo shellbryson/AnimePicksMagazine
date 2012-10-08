@@ -76,7 +76,7 @@ jQuery(document).ready(function($) {
     
     $(".updates").masonry({
         itemSelector: ".neko_box",
-        columnWidth: 250
+        columnWidth: 240
     });
     
     // Ref cache
